@@ -20,7 +20,8 @@ import javax.persistence.Id;
 public class Usuario {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
+    private int id;
     private String nome;
     private String email;
     private int perfil;
@@ -70,6 +71,10 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" + "nome=" + nome + ", email=" + email + ", perfil=" + perfil + '}';
+    }
+
+    public int getId() {
+        return id;
     }
     
 }
